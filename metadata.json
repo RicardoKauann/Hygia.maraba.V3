@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "HYGIA 3.0 — Higienização & Cuidado Premium",
+  "description": "Website oficial da Hygia em Marabá - PA. Higienização profissional de estofados, colchões, tapetes, interiores automotivos e impermeabilização.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

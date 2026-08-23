@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hygia Marabá | Higienização de Estofados Premium</title>
-    <meta name="description" content="Higienização profissional de sofás e estofados em Marabá. Elimine ácaros, bactérias e odores com secagem rápida e produtos seguros.">
-    
+    <title>HYGIA 3.0 | Higienização Profissional de Estofados em Marabá - PA</title>
+    <meta name="description" content="Higienização profissional de sofás, colchões, tapetes, interiores automotivos e impermeabilização em Marabá e região. Cuidado, bem-estar e conservação para o seu lar.">
+    <meta name="keywords" content="higienização de estofados em Marabá, limpeza de sofá em Marabá, higienização de sofá Marabá, higienização automotiva Marabá, impermeabilização de sofá Marabá, lavagem a seco Marabá">
+    <meta name="author" content="Hygia Higienização Profissional">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HYGIA | Higienização Profissional de Estofados em Marabá">
+    <meta property="og:description" content="Higienização de sofás, colchões e interiores automotivos com padrão de excelência em Marabá - PA. Elimine ácaros e odores com secagem rápida.">
+    <meta property="og:image" content="https://i.postimg.cc/9M7jHzbD/sofa-premium-jpeg.jpg">
+    <meta property="og:locale" content="pt_BR">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,20 +28,40 @@
             theme: {
                 extend: {
                     colors: {
-                        light: '#F9FAFB',
-                        dark: '#050505',
+                        dark: '#08090A',
+                        darker: '#040505',
+                        surface: '#111315',
+                        light: '#F8F9FA',
+                        subtle: '#ECEFF1',
                         brand: {
-                            deep: '#2E7D32',
-                            light: '#4CAF50',
+                            deep: '#1E6B38',
+                            emerald: '#238646',
+                            light: '#34A853',
+                            glow: '#4ADE80',
+                            mist: 'rgba(35, 134, 70, 0.12)'
                         },
-                        gold: '#C8A85D'
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#E2C27F',
+                            dark: '#9E7A32',
+                            glow: 'rgba(197, 160, 89, 0.15)'
+                        },
+                        silver: {
+                            DEFAULT: '#CBD5E1',
+                            metallic: '#94A3B8',
+                            dark: '#475569'
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['Syne', 'sans-serif'],
+                        brand: ['Cinzel', 'serif']
                     },
                     boxShadow: {
-                        'premium': '0 4px 40px -2px rgba(0, 0, 0, 0.05)',
+                        'subtle': '0 2px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'premium': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+                        'glow-green': '0 0 35px rgba(35, 134, 70, 0.35)',
+                        'glow-gold': '0 0 35px rgba(197, 160, 89, 0.3)'
                     }
                 }
             }
@@ -41,654 +71,1278 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Schema.org JSON-LD (SEO Local para Marabá - PA) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "HYGIA Higienização Profissional",
+      "description": "Higienização profissional de estofados, sofás, colchões, tapetes e interiores automotivos em Marabá - PA.",
+      "image": "https://i.postimg.cc/9M7jHzbD/sofa-premium-jpeg.jpg",
+      "telephone": "+5594981268102",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marabá",
+        "addressRegion": "PA",
+        "addressCountry": "BR"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Marabá"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Sa 08:00-18:00"
+    }
+    </script>
+
+    <!-- Meta Pixel Code (Opcional - Ativo para Rastreamento de Conversão) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        // Inicializa o Pixel do Meta Ads (Insira seu ID se desejar)
+        fbq('init', '123456789012345'); 
+        fbq('track', 'PageView');
+    </script>
+
     <style>
+        /* Smooth Scroll & Typography Balance */
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #F9FAFB; color: #1a1a1a; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Syne', sans-serif; letter-spacing: -0.025em; }
         
-        .text-balance {
-            text-wrap: balance;
-        }
+        .text-balance { text-wrap: balance; }
         
-        /* Subtle Fade In Animation */
-        .fade-in-up {
+        /* Entrance Animations */
+        .reveal-on-scroll {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
         }
-        .fade-in-up.visible {
+        .reveal-on-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Glassmorphism for floating header/cards */
-        .glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        /* Glassmorphic elements */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         .glass-dark {
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(17, 19, 21, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Before/After Interactive Comparison Slider */
+        .ba-container {
+            position: relative;
+            user-select: none;
+            touch-action: pan-y;
+            overflow: hidden;
+        }
+        .ba-slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #ffffff;
+            z-index: 20;
+            cursor: ew-resize;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+        }
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 42px;
+            height: 42px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            border: 2px solid #238646;
+            transition: transform 0.15s ease;
+        }
+        .ba-container:hover .ba-handle {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08090A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #238646;
+            border-radius: 4px;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-brand-deep selection:text-white">
+<body class="bg-light text-[#1a1c1e] antialiased selection:bg-brand-deep selection:text-white">
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5594981268102?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20higienização%20de%20estofados." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-brand-deep text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group flex-col">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
-        <span class="absolute right-full mr-4 bg-white text-dark text-sm font-medium py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            Fale conosco
-        </span>
-    </a>
+    <!-- Meta Pixel Fallback -->
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1" alt="Meta Pixel" />
+    </noscript>
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-40 glass transition-all duration-300" id="header">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <img src="https://i.postimg.cc/DZZR70cY/logo.png" alt="Hygia" class="h-10 w-auto object-contain scale-125 origin-left" crossorigin="anonymous">
-            </div>
-            <a href="https://wa.me/5594981268102" class="hidden sm:flex items-center gap-2 text-sm font-medium text-dark hover:text-brand-deep transition-colors bg-white/50 px-4 py-2 rounded-full border border-gray-200">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                (94) 98126-8102
+    <!-- WhatsApp Floating Action Pill -->
+    <aside aria-label="Atendimento Rápido" class="fixed bottom-6 right-6 z-50">
+        <a id="floating-whatsapp-btn" href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 bg-brand-deep hover:bg-brand-emerald text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:shadow-glow-green transition-all duration-300 hover:-translate-y-1">
+            <span class="relative flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-glow opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-glow"></span>
+            </span>
+            <i data-lucide="message-circle" class="w-6 h-6 shrink-0"></i>
+            <span class="hidden sm:inline-block text-sm font-semibold tracking-wide pr-1">Falar no WhatsApp</span>
+        </a>
+    </aside>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 w-full z-40 glass-header transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo Signature -->
+            <a href="#topo" class="flex items-center gap-3 group">
+                <img src="https://i.postimg.cc/DZZR70cY/logo.png" alt="HYGIA Higienização e Cuidado" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" crossorigin="anonymous">
+                <div class="hidden lg:flex flex-col">
+                    <span class="text-[10px] tracking-[0.25em] text-gray-500 font-semibold uppercase">Marabá • PA</span>
+                </div>
             </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="#servicos" class="hover:text-brand-deep transition-colors">Serviços</a>
+                <a href="#metodo" class="hover:text-brand-deep transition-colors">Método Hygia</a>
+                <a href="#resultados" class="hover:text-brand-deep transition-colors">Resultados</a>
+                <a href="#automotivo" class="hover:text-brand-deep transition-colors flex items-center gap-1">
+                    <span>Automotivo</span>
+                    <span class="text-[10px] bg-dark text-white px-1.5 py-0.5 rounded font-mono font-bold">PRO</span>
+                </a>
+                <a href="#diferenciais" class="hover:text-brand-deep transition-colors">Diferenciais</a>
+            </nav>
+
+            <!-- Quick Contact Button -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+5594981268102" class="hidden xl:flex items-center gap-2 text-xs font-semibold text-gray-600 bg-gray-100 hover:bg-gray-200 px-3.5 py-2 rounded-full transition-colors">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-deep"></i>
+                    <span>(94) 98126-8102</span>
+                </a>
+                <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-dark hover:bg-brand-deep text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md">
+                    <span>Solicitar Orçamento</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- 1. HERO (FUNDO ESCURO) -->
-    <section class="relative bg-dark text-white pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background subtle glow -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-deep opacity-15 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="max-w-2xl fade-in-up">
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-gray-300 backdrop-blur-sm">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold"></i>
-                        Produtos Seguros
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-gray-300 backdrop-blur-sm">
-                        <i data-lucide="wind" class="w-3.5 h-3.5 text-brand-light"></i>
-                        Sem Cheiro Forte
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-gray-300 backdrop-blur-sm">
-                        <i data-lucide="clock" class="w-3.5 h-3.5 text-gold"></i>
-                        Secagem Rápida
-                    </span>
-                </div>
-                
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6 text-balance">
-                    Seu sofá pode estar cheio de ácaros e bactérias — <span class="text-gray-400">mesmo parecendo limpo.</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-gray-400 mb-8 font-light leading-relaxed max-w-xl">
-                    Higienização profissional que elimina sujeira invisível, odores e riscos à saúde da sua família em Marabá.
-                </p>
+    <!-- MAIN CONTENT -->
+    <main id="topo">
 
-                <div class="flex items-center gap-3 mb-10 text-gold text-sm font-medium bg-gold/10 inline-flex px-4 py-2.5 rounded-lg border border-gold/20 backdrop-blur-sm shadow-[0_0_20px_rgba(200,168,93,0.1)]">
-                    <i data-lucide="alert-triangle" class="w-4 h-4"></i>
-                    Atendimentos limitados por dia em Marabá
-                </div>
+        <!-- 1. HERO SECTION (Preto + Branco + Verde Hygia) -->
+        <section class="relative bg-dark text-white pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-36 overflow-hidden border-b border-gray-800">
+            <!-- Ambient Glow & Subtle Texture -->
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[500px] bg-brand-deep/20 blur-[130px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-[450px] h-[450px] bg-gold/10 blur-[140px] rounded-full pointer-events-none"></div>
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5594981268102" class="inline-flex items-center justify-center gap-2 bg-brand-deep hover:bg-green-700 text-white font-medium py-4 px-8 rounded-xl transition-all shadow-lg shadow-brand-deep/30 hover:shadow-brand-deep/50 hover:-translate-y-1">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                        Chamar no WhatsApp agora
-                    </a>
-                    <a href="#servicos" class="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-600 hover:border-gold hover:text-gold text-white font-medium py-4 px-8 rounded-xl transition-all">
-                        Ver orçamento em 1 minuto
-                    </a>
-                </div>
-            </div>
-            
-            <div class="relative lg:h-[600px] flex justify-center items-center fade-in-up" style="transition-delay: 200ms;">
-                <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-gray-800">
-                    <img src="https://i.postimg.cc/9M7jHzbD/sofa-premium-jpeg.jpg" alt="Sofá impecável" class="w-full h-full object-cover" crossorigin="anonymous">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Copy & Value Proposition -->
+                <div class="lg:col-span-7 reveal-on-scroll">
                     
-                    <!-- Premium Badge Badge -->
-                    <div class="absolute bottom-6 left-6 right-6 p-5 glass-dark rounded-xl">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-deep/20 flex items-center justify-center border border-brand-deep/30 shadow-[0_0_15px_rgba(46,125,50,0.4)]">
-                                <i data-lucide="star" class="w-5 h-5 text-gold fill-gold"></i>
-                            </div>
-                            <div>
-                                <p class="text-white font-semibold flex items-center gap-2">Padrão Premium <i data-lucide="badge-check" class="w-4 h-4 text-brand-light"></i></p>
-                                <p class="text-gray-400 text-sm">Renovação garantida do seu móvel</p>
-                            </div>
-                        </div>
+                    <!-- Tagline de Localização e Autoridade -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 mb-6 backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-brand-light animate-pulse"></span>
+                        <span class="text-white font-semibold">MARABÁ & REGIÃO</span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-300">HIGIENIZAÇÃO • CUIDADO • BEM-ESTAR</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 2. SEÇÃO BRANCA — ANTES E DEPOIS -->
-    <section class="py-24 bg-white" id="antes-depois">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-dark mb-4">Veja a diferença na prática</h2>
-                <p class="text-gray-500 font-light text-xl">Arraste para ver a renovação absurda que nosso processo proporciona.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 fade-in-up" style="transition-delay: 200ms;">
-                <!-- Card 1 -->
-                <div class="bg-light rounded-[2.5rem] p-4 border border-gray-100 shadow-premium group">
-                    <div class="relative h-72 sm:h-96 rounded-3xl overflow-hidden mb-6 flex group-hover:shadow-inner transition-shadow">
-                        <!-- Image -->
-                        <div class="w-1/2 relative bg-gray-200 overflow-hidden">
-                            <img src="https://i.postimg.cc/Dwvg9D6L/sofa-antes-e-depois.jpg" alt="Antes" class="absolute inset-0 w-full h-full object-cover object-left opacity-90 sepia-[.1] contrast-75 scale-105" crossorigin="anonymous">
-                            <div class="absolute top-4 left-4 bg-dark/80 backdrop-blur text-white text-xs font-semibold px-4 py-1.5 rounded-full z-10">ANTES</div>
-                        </div>
-                        <div class="w-1/2 relative border-l-[3px] border-white z-10 overflow-hidden">
-                            <img src="https://i.postimg.cc/Dwvg9D6L/sofa-antes-e-depois.jpg" alt="Depois" class="absolute inset-0 w-full h-full object-cover object-right scale-105" style="transform-origin: left" crossorigin="anonymous">
-                            <div class="absolute top-4 right-4 bg-brand-deep/90 backdrop-blur text-white text-xs font-semibold px-4 py-1.5 rounded-full z-10">DEPOIS</div>
-                        </div>
-                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_0_20px_rgba(0,0,0,0.15)] flex items-center justify-center z-20 hover:scale-110 transition-transform">
-                            <i data-lucide="chevrons-left-right" class="w-5 h-5 text-gray-500"></i>
-                        </div>
-                    </div>
-                    <div class="px-2">
-                        <h3 class="text-2xl font-bold text-dark">Sofá Retrátil</h3>
-                        <p class="text-gray-500 text-base mt-2">Remoção de manchas encardidas, marcas de uso e revitalização total da cor original do tecido.</p>
-                    </div>
-                </div>
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-display leading-[1.12] mb-6 text-balance text-white">
+                        Seu estofado merece mais do que uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-brand-glow">simples limpeza.</span>
+                    </h1>
 
-                <!-- Card 2 -->
-                <div class="bg-light rounded-[2.5rem] p-4 border border-gray-100 shadow-premium group">
-                    <div class="relative h-72 sm:h-96 rounded-3xl overflow-hidden mb-6 flex group-hover:shadow-inner transition-shadow">
-                        <!-- Image -->
-                        <div class="w-1/2 relative bg-gray-200 overflow-hidden">
-                            <img src="https://i.postimg.cc/WzvxR8tx/colchao-antes-e-depois.jpg" alt="Antes" class="absolute inset-0 w-full h-full object-cover object-left opacity-90 sepia-[.1] contrast-75 scale-105" crossorigin="anonymous">
-                            <div class="absolute top-4 left-4 bg-dark/80 backdrop-blur text-white text-xs font-semibold px-4 py-1.5 rounded-full z-10">ANTES</div>
-                        </div>
-                        <div class="w-1/2 relative border-l-[3px] border-white z-10 overflow-hidden">
-                            <img src="https://i.postimg.cc/WzvxR8tx/colchao-antes-e-depois.jpg" alt="Depois" class="absolute inset-0 w-full h-full object-cover object-right scale-105" style="transform-origin: left" crossorigin="anonymous">
-                            <div class="absolute top-4 right-4 bg-brand-deep/90 backdrop-blur text-white text-xs font-semibold px-4 py-1.5 rounded-full z-10">DEPOIS</div>
-                        </div>
-                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-[0_0_20px_rgba(0,0,0,0.15)] flex items-center justify-center z-20 hover:scale-110 transition-transform">
-                            <i data-lucide="chevrons-left-right" class="w-5 h-5 text-gray-500"></i>
-                        </div>
-                    </div>
-                    <div class="px-2">
-                        <h3 class="text-2xl font-bold text-dark">Colchão Queen</h3>
-                        <p class="text-gray-500 text-base mt-2">Extração profunda de ácaros acumulados, pele morta e suor, devolvendo uma noite de sono segura.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. SEÇÃO CLARA — O QUE TEM NO SOFÁ -->
-    <section class="py-24 bg-light relative border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="fade-in-up">
-                    <h2 class="text-3xl md:text-5xl font-display font-bold text-dark mb-6 text-balance">O perigo mora no que <span class="text-gray-400">você não vê</span></h2>
-                    <p class="text-gray-500 font-light text-xl mb-12 leading-relaxed">
-                        A poeira superficial é só a ponta do iceberg. O interior do seu estofado é um criadouro perfeito para micro-organismos nocivos.
+                    <!-- Subheadline Clara e Objetiva -->
+                    <p class="text-base sm:text-lg text-gray-300 mb-8 font-normal leading-relaxed max-w-2xl text-balance">
+                        Higienização profissional de estofados, colchões e interiores em Marabá. Protocolo cirúrgico de extração profunda que devolve a pureza, o aroma agradável e a segurança para quem você ama.
                     </p>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-5 p-6 rounded-[2rem] bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                            <div class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center shrink-0 border border-red-100">
-                                <i data-lucide="bug" class="w-6 h-6 text-red-500"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-dark font-bold text-xl mb-1">Ácaros Invisíveis</h4>
-                                <p class="text-gray-500 text-base leading-relaxed">Se alimentam de pele morta e são os verdadeiros responsáveis por crises de rinite, asma e alergias.</p>
-                            </div>
+                    <!-- Trust Indicators Pills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10 text-xs text-gray-300">
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface border border-white/5">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-brand-light shrink-0"></i>
+                            <span>Produtos Seguros</span>
                         </div>
-                        
-                        <div class="flex items-start gap-5 p-6 rounded-[2rem] bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                            <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
-                                <i data-lucide="microscope" class="w-6 h-6 text-orange-500"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-dark font-bold text-xl mb-1">Bactérias</h4>
-                                <p class="text-gray-500 text-base leading-relaxed">Suor, saliva, pets e a rua trazem bactérias que se multiplicam no tecido, gerando riscos silenciosos.</p>
-                            </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface border border-white/5">
+                            <i data-lucide="clock" class="w-4 h-4 text-gold shrink-0"></i>
+                            <span>Secagem Rápida</span>
                         </div>
-
-                        <div class="flex items-start gap-5 p-6 rounded-[2rem] bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                            <div class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center shrink-0 border border-yellow-100">
-                                <i data-lucide="cloud-rain" class="w-6 h-6 text-yellow-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-dark font-bold text-xl mb-1">Fungos e Mofo</h4>
-                                <p class="text-gray-500 text-base leading-relaxed">A umidade retida cria fungos causadores daquele forte mau cheiro de "cachorro molhado" ou mofo.</p>
-                            </div>
+                        <div class="col-span-2 sm:col-span-1 flex items-center gap-2 p-2.5 rounded-xl bg-surface border border-white/5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-light shrink-0"></i>
+                            <span>Atendimento no Local</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="relative fade-in-up" style="transition-delay: 200ms;">
-                    <div class="aspect-square rounded-[3rem] overflow-hidden relative border border-gray-200 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=800" alt="Mãe e filha bebê no sofá" class="w-full h-full object-cover">
-                        <!-- Overlay gradient for contrast -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent"></div>
-                        <div class="absolute bottom-10 left-10 right-10 text-white">
-                            <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center mb-4">
-                                <i data-lucide="heart" class="w-6 h-6 fill-white text-white"></i>
-                            </div>
-                            <h3 class="font-display font-semibold text-2xl md:text-3xl mb-3">O sofá é o coração da sala.</h3>
-                            <p class="text-base text-gray-200 font-light text-balance leading-relaxed">Não deixe que ele seja uma ameaça à saúde da sua família. A higienização é um ato de cuidado.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. BENEFÍCIOS (FUNDO BRANCO) -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-dark mb-6">Ação profunda, resultados evidentes</h2>
-                <p class="text-gray-500 font-light text-xl max-w-2xl mx-auto">Nossas máquinas de extração de alto vácuo garantem uma limpeza que você sente na pele e no ar.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card -->
-                <div class="bg-light rounded-[2rem] p-8 border border-gray-100 hover:-translate-y-1 transition-all fade-in-up">
-                    <div class="w-16 h-16 rounded-[1.25rem] bg-white border border-gray-100 flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="shield" class="w-7 h-7 text-brand-deep"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-dark mb-3">Elimina Micro-organismos</h3>
-                    <p class="text-gray-500 text-base leading-relaxed font-light">Arrancamos até 99% dos ácaros, bactérias e fungos, devolvendo a segurança respiratória.</p>
-                </div>
-                <!-- Card -->
-                <div class="bg-light rounded-[2rem] p-8 border border-gray-100 hover:-translate-y-1 transition-all fade-in-up" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 rounded-[1.25rem] bg-white border border-gray-100 flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="sparkles" class="w-7 h-7 text-gold"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-dark mb-3">Remove Manchas e Cheiros</h3>
-                    <p class="text-gray-500 text-base leading-relaxed font-light">Shampoos profissionais que quebram manchas corporais, suor e aquele odor de casa fechada/pet.</p>
-                </div>
-                <!-- Card -->
-                <div class="bg-light rounded-[2rem] p-8 border border-gray-100 hover:-translate-y-1 transition-all fade-in-up" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 rounded-[1.25rem] bg-white border border-gray-100 flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="clock-4" class="w-7 h-7 text-brand-deep"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-dark mb-3">Vida Longa ao Sofá</h3>
-                    <p class="text-gray-500 text-base leading-relaxed font-light">A sujeira fricciona e rompe as fibras. Limpar evita o apodrecimento e adia a troca do móvel.</p>
-                </div>
-                <!-- Card -->
-                <div class="bg-light rounded-[2rem] p-8 border border-gray-100 hover:-translate-y-1 transition-all fade-in-up" style="transition-delay: 300ms;">
-                    <div class="w-16 h-16 rounded-[1.25rem] bg-white border border-gray-100 flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="sofa" class="w-7 h-7 text-gold"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-dark mb-3">Conforto e Maciez</h3>
-                    <p class="text-gray-500 text-base leading-relaxed font-light">Finalizamos com neutralizador de odores e amaciante de fibras, deixando um toque de seda.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. DIFERENCIAIS (FUNDO ESCURO) -->
-    <section class="py-24 bg-dark text-white relative border-y border-gray-800 overflow-hidden">
-        <!-- Subtle background shapes -->
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-deep/15 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gold/10 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 fade-in-up">
-                    <div class="space-y-10">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-full border border-gray-700 bg-black flex flex-col items-center justify-center shrink-0 text-brand-light">
-                                <span class="font-display font-bold text-xl">01</span>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold mb-2">Secagem Rápida</h4>
-                                <p class="text-gray-400 font-light text-lg leading-relaxed">Nossa tecnologia de sucção permite o uso do sofá em poucas horas no mesmo dia. <span class="text-white font-medium">Não encharcamos a espuma.</span></p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-full border border-gray-700 bg-black flex flex-col items-center justify-center shrink-0 text-brand-light">
-                                <span class="font-display font-bold text-xl">02</span>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold mb-2">Sem Bagunça na Casa</h4>
-                                <p class="text-gray-400 font-light text-lg leading-relaxed">O serviço é feito de forma cirúrgica na sua sala. Forramos o piso e não respingamos nas paredes ou móveis.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-full border border-gray-700 bg-black flex flex-col items-center justify-center shrink-0 text-brand-light">
-                                <span class="font-display font-bold text-xl">03</span>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold mb-2">Química Inteligente e Segura</h4>
-                                <p class="text-gray-400 font-light text-lg leading-relaxed">Usamos produtos regulamentados, livres de solventes agressivos. É <span class="text-white font-medium text-gold">100% seguro para deitar com seus bebês e pets após seco</span>.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 rounded-full border border-gray-700 bg-black flex flex-col items-center justify-center shrink-0 text-gold">
-                                <span class="font-display font-bold text-xl">04</span>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-bold mb-2">Pontualidade Hygia</h4>
-                                <p class="text-gray-400 font-light text-lg leading-relaxed">Chegamos no horário cravado. Sem desculpas e sem deixar você esperando o dia todo.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-1 lg:order-2 fade-in-up">
-                    <h2 class="text-4xl md:text-6xl font-display font-bold mb-8 text-balance leading-tight">A diferença mora nos <span class="text-brand-light">detalhes.</span></h2>
-                    <p class="text-xl text-gray-400 font-light mb-12 leading-relaxed text-balance">
-                        Esqueça experiências amadoras. A Hygia traz para a sua casa um método testado, máquinas profissionais e técnicos uniformizados.
-                    </p>
-                    <a href="https://wa.me/5594981268102" class="inline-flex items-center justify-center gap-3 bg-transparent border border-gray-600 hover:border-brand-light hover:text-brand-light hover:bg-brand-light/5 text-white font-medium py-5 px-8 rounded-xl transition-all w-full sm:w-auto text-lg">
-                        Garantir Atendimento
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. SERVIÇOS (FUNDO BRANCO) -->
-    <section class="py-24 bg-white" id="servicos">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 fade-in-up">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-display font-bold text-dark mb-4">Especialidades</h2>
-                    <p class="text-gray-500 font-light text-xl">Lavagem a seco profunda para todos os tipos de tecido.</p>
-                </div>
-                <div class="bg-gray-50 border border-gray-200 px-6 py-4 rounded-full flex items-center gap-4 w-max shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-brand-deep animate-pulse"></span>
-                    <span class="text-base font-medium text-dark">Higienização a partir de <strong class="text-2xl text-brand-deep ml-1 font-display">R$ 79</strong></span>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-                <!-- Sofás -->
-                <div class="group relative rounded-[2rem] overflow-hidden bg-gray-100 aspect-square sm:aspect-[4/3] fade-in-up cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Sofá" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500">
-                        <h3 class="text-3xl font-display font-bold text-white mb-2">Sofás e Poltronas</h3>
-                        <p class="text-gray-300 text-base font-light leading-relaxed">Recuperamos a cor original e removemos todo o encardido do uso diário, prolongando a vida do seu móvel principal.</p>
-                    </div>
-                </div>
-
-                <!-- Colchões -->
-                <div class="group relative rounded-[2rem] overflow-hidden bg-gray-100 aspect-square sm:aspect-[4/3] fade-in-up cursor-pointer" style="transition-delay: 100ms;">
-                    <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=800" alt="Colchão" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 class="text-3xl font-display font-bold text-white mb-2">Colchões</h3>
-                        <p class="text-gray-300 text-base font-light leading-relaxed">Fundamental para saúde respiratória. Extraímos todo o suor, ácaros mortos e odores entranhados na espuma.</p>
-                    </div>
-                </div>
-
-                <!-- Tapetes -->
-                <div class="group relative rounded-[2rem] overflow-hidden bg-gray-100 aspect-square sm:aspect-[4/3] fade-in-up cursor-pointer" style="transition-delay: 200ms;">
-                    <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&q=80&w=800" alt="Tapetes" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 class="text-3xl font-display font-bold text-white mb-2">Tapetes</h3>
-                        <p class="text-gray-300 text-base font-light leading-relaxed">Desinfecção fio a fio, removendo resíduos que os aspiradores normais nunca conseguem puxar.</p>
-                    </div>
-                </div>
-
-                <!-- Bancos de carro -->
-                <div class="group relative rounded-[2rem] overflow-hidden bg-gray-100 aspect-square sm:aspect-[4/3] fade-in-up cursor-pointer xl:col-start-1" style="transition-delay: 0ms;">
-                    <img src="https://i.postimg.cc/hjLQP4PL/car-higi.jpg" alt="Bancos de carro" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" crossorigin="anonymous">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 class="text-3xl font-display font-bold text-white mb-2">Bancos de Carro</h3>
-                        <p class="text-gray-300 text-base font-light leading-relaxed">Seu carro com aroma de limpo. Lavamos teto, bancos, carpetes e portas do veículo a domicílio.</p>
-                    </div>
-                </div>
-
-                <!-- Impermeabilização (Destaque) -->
-                <div class="group relative rounded-[2rem] overflow-hidden bg-dark fade-in-up p-8 md:p-12 border border-gray-800 xl:col-span-2 flex items-center justify-between shadow-2xl" style="transition-delay: 100ms;">
-                    <img src="https://i.postimg.cc/mrMt8Z9n/impermeabilizacao-sem-logo.jpg" alt="Impermeabilização" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-1000 group-hover:scale-105" crossorigin="anonymous">
-                    <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-dark/20"></div>
-                    
-                    <div class="relative z-10 w-full sm:w-2/3">
-                        <div class="inline-flex items-center gap-2 py-1.5 px-4 mb-6 rounded-full border border-gold/40 bg-gold/10 text-xs font-bold text-gold uppercase tracking-widest backdrop-blur">
-                            <i data-lucide="shield-plus" class="w-4 h-4"></i>
-                            Proteção Extra
-                        </div>
-                        <h3 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4">Impermeabilização Premium</h3>
-                        <p class="text-gray-400 font-light text-lg mb-8 max-w-lg leading-relaxed">
-                            Crie um escudo invisível repelente de líquidos. Evite que acidentes com café, vinho ou urina de pets manchem o tecido definitivamente.
-                        </p>
-                        <a href="https://wa.me/5594981268102?text=Gostaria%20de%20um%20orçamento%20de%20Impermeabilização." class="inline-flex items-center justify-center gap-2 bg-gold hover:bg-[#b5954a] text-dark font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:-translate-y-1">
-                            Ver preço de Proteção
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-deep hover:bg-brand-emerald text-white font-semibold py-4 px-7 rounded-xl transition-all duration-300 shadow-glow-green hover:-translate-y-0.5 text-sm sm:text-base">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>SOLICITAR ORÇAMENTO</span>
+                        </a>
+                        <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20enviar%20uma%20foto%20do%20meu%20estofado%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white/5 hover:bg-white/10 text-gray-200 hover:text-white border border-white/15 font-medium py-4 px-6 rounded-xl transition-all duration-300 text-sm sm:text-base">
+                            <i data-lucide="camera" class="w-5 h-5 text-gold"></i>
+                            <span>ENVIAR FOTO DO ESTOFADO</span>
                         </a>
                     </div>
-                    
-                    <!-- Decorative element right side hidden on small screen -->
-                    <div class="hidden sm:block absolute right-0 bottom-0 h-full w-1/3 opacity-30 select-none pointer-events-none">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full transform translate-x-1/4 translate-y-1/4 text-gold">
-                            <path fill="currentColor" d="M44.7,-76.4C58.3,-69.2,70,-56.9,78.8,-42.6C87.6,-28.3,93.5,-12,91.8,3.6C90.2,19.2,81.1,34.1,70.3,46.1C59.6,58.2,47.3,67.3,33.3,73.1C19.3,79,-6.4,81.4,-21.3,76.5C-36.2,71.5,-50.2,59.1,-62.4,45C-74.6,30.9,-84.9,15.4,-86.3,-0.8C-87.8,-17.1,-80.4,-34.1,-68.8,-47.4C-57.1,-60.8,-41.2,-70.5,-26.4,-75.4C-11.6,-80.3,2.1,-80.4,16,-78.9C29.9,-77.4,44.7,-76.4,44.7,-76.4Z" transform="translate(100 100)" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 7. PARA QUEM É (FUNDO CLARO) -->
-    <section class="py-24 bg-light border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-dark text-center mb-20 fade-in-up">Ideal para o seu estilo de vida</h2>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-                <!-- Item -->
-                <div class="flex flex-col items-center text-center fade-in-up group">
-                    <div class="w-24 h-24 rounded-[2rem] bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-6 text-brand-deep group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                        <i data-lucide="baby" class="w-10 h-10"></i>
-                    </div>
-                    <h4 class="font-bold text-xl text-dark mb-2">Mães e Crianças</h4>
-                    <p class="text-base text-gray-500 font-light leading-relaxed">Ambiente livre de poeira para os bebês que vivem engatinhando e brincando sobre o sofá.</p>
                 </div>
+
+                <!-- Right Column: Fotografia Editorial Real da Hygia -->
+                <div class="lg:col-span-5 reveal-on-scroll" style="transition-delay: 150ms;">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Card com moldura nobre -->
+                        <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-surface aspect-[4/5] group">
+                            <img src="https://i.postimg.cc/9M7jHzbD/sofa-premium-jpeg.jpg" alt="Sofá higienizado com padrão premium Hygia em Marabá" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" crossorigin="anonymous">
+                            
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-dark/30 to-transparent"></div>
+
+                            <!-- Floating Badge de Qualidade -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-dark">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-brand-deep/30 border border-brand-emerald/40 flex items-center justify-center text-brand-glow shrink-0">
+                                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="text-white text-sm font-bold flex items-center gap-1.5">
+                                            <span>Padrão de Cuidado Hygia</span>
+                                            <i data-lucide="badge-check" class="w-4 h-4 text-brand-light"></i>
+                                        </h2>
+                                        <p class="text-gray-400 text-xs mt-0.5">Assepsia profunda, fibras preservadas e toque renovado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detalhe decorativo discreto -->
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-brand-light/30 rounded-bl-3xl pointer-events-none hidden sm:block"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. SEÇÃO CONSCIÊNCIA / O PROBLEMA INVISÍVEL -->
+        <section class="py-20 sm:py-28 bg-light border-b border-gray-200/80">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
                 
-                <!-- Item -->
-                <div class="flex flex-col items-center text-center fade-in-up group" style="transition-delay: 100ms;">
-                    <div class="w-24 h-24 rounded-[2rem] bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                        <i data-lucide="dog" class="w-10 h-10"></i>
-                    </div>
-                    <h4 class="font-bold text-xl text-dark mb-2">Tutores de Pets</h4>
-                    <p class="text-base text-gray-500 font-light leading-relaxed">Removemos a oleosidade, as patas de barro e aquele eterno 'cheiro de cachorro' impregnado no ar.</p>
+                <div class="max-w-3xl mb-16 reveal-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Consciência & Saúde</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-dark mt-2 mb-4 leading-tight text-balance">
+                        Nem tudo que parece limpo está <span class="text-gray-400">realmente limpo.</span>
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
+                        A poeira superficial visível no dia a dia é apenas uma fração do que o estofado acumula. Com o tempo e o clima da nossa região, o interior das fibras absorve partículas biológicas e impurezas invisíveis a olho nu.
+                    </p>
                 </div>
 
-                <!-- Item -->
-                <div class="flex flex-col items-center text-center fade-in-up group" style="transition-delay: 200ms;">
-                    <div class="w-24 h-24 rounded-[2rem] bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-6 text-brand-deep group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                        <i data-lucide="spray-can" class="w-10 h-10"></i>
+                <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-subtle hover:shadow-premium transition-all duration-300 reveal-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6">
+                            <i data-lucide="wind" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2 font-display">Ácaros e Alérgenos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Resíduos orgânicos e descamação natural da pele nutrem micro-organismos que desencadeiam rinite, tosses noturnas e irritações respiratórias constantes.
+                        </p>
                     </div>
-                    <h4 class="font-bold text-xl text-dark mb-2">Sofredores Alérgicos</h4>
-                    <p class="text-base text-gray-500 font-light leading-relaxed">Espirros logo que senta na sala? Extirpamos o foco de fungos e ácaros, aliviando rinite imediatamente.</p>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-subtle hover:shadow-premium transition-all duration-300 reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6">
+                            <i data-lucide="droplets" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2 font-display">Suor e Odores Retidos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            A umidade absorvida do calor diário e resíduos de pets penetram na espuma, oxidando e criando aquele cheiro característico de estofado cansado.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-subtle hover:shadow-premium transition-all duration-300 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+                            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2 font-display">Atrito e Desgaste das Fibras</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Microrresíduos de poeira agem como pequenas lixas microscópicas entre as tramas do tecido, acelerando o desbotamento e o rasgo precoce do móvel.
+                        </p>
+                    </div>
+
                 </div>
 
-                <!-- Item -->
-                <div class="flex flex-col items-center text-center fade-in-up group" style="transition-delay: 300ms;">
-                    <div class="w-24 h-24 rounded-[2rem] bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-6 text-gold group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                        <i data-lucide="gem" class="w-10 h-10"></i>
+                <!-- Callout de Confiança -->
+                <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-dark text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-deep flex items-center justify-center text-white shrink-0">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white font-display">Higienizar é um ato de cuidado com sua família</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm">Restabeleça um ambiente puro, fresco e acolhedor na sua sala e nos seus quartos.</p>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-xl text-dark mb-2">Pessoas Exigentes</h4>
-                    <p class="text-base text-gray-500 font-light leading-relaxed">Para quem adora a casa cheirando a limpeza e quer manter o imóvel valorizado e bonito.</p>
+                    <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20agendar%20uma%20higieniza%C3%A7%C3%A3o%20para%20minha%20casa." target="_blank" rel="noopener noreferrer" class="shrink-0 bg-white text-dark hover:bg-brand-deep hover:text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all duration-300">
+                        Cuidar do Meu Estofado
+                    </a>
                 </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 8. DEPOIMENTOS -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-dark mb-4 fade-in-up">Elas já comprovaram em Marabá</h2>
-            <p class="text-xl text-gray-500 font-light mb-16 fade-in-up" style="transition-delay: 100ms;">Mais de 400 famílias respirando ar puro.</p>
-
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <!-- Testimonial 1 -->
-                <div class="bg-light p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-premium transition-shadow fade-in-up relative">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
-                    <div class="flex gap-1 text-gold mb-6">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+        <!-- 3. SEÇÃO SERVIÇOS (CASA • FAMÍLIA • AUTOMOTIVO • PROTEÇÃO) -->
+        <section class="py-20 sm:py-28 bg-white border-b border-gray-200/80" id="servicos">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal-on-scroll">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Especialidades Exclusivas</span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-dark mt-2">
+                            Serviços com Padrão Hygia
+                        </h2>
                     </div>
-                    <p class="text-gray-600 font-light text-lg italic mb-8 leading-relaxed">
-                        "Estava com vergonha de receber visitas porque meu sofá da sala de estar estava encardido de uso. O resultado final me deixou de boca aberta, parece que saiu da loja de novo! Sem cheiro químico e secou super rápido."
+                    <p class="text-gray-500 text-sm sm:text-base max-w-md">
+                        Processos estruturados e seguros para cada tipo de tecido, fibra e superfície.
                     </p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-brand-deep/10 flex items-center justify-center font-bold text-brand-deep text-lg border border-brand-deep/20">A</div>
-                        <div>
-                            <p class="font-bold text-dark text-base">Aline Costa</p>
-                            <p class="text-sm text-gray-500">Mãe de 2 e dona de casa</p>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-light p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-premium transition-shadow fade-in-up relative" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
-                    <div class="flex gap-1 text-gold mb-6">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                    <p class="text-gray-600 font-light text-lg italic mb-8 leading-relaxed">
-                        "Meu filho mais novo tinha crises de espirro direto na sala, não dava paz. Chamamos pra limpar os sofás e o colchão dele. Faz um mês e a alergia simplesmente sumiu. O valor pago sai barato perto dessa tranquilidade!"
-                    </p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center font-bold text-gold text-lg border border-gold/30">C</div>
-                        <div>
-                            <p class="font-bold text-dark text-base">Camila Oliveira</p>
-                            <p class="text-sm text-gray-500">Bancária</p>
+                <!-- Grid de Categorias -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- SERVIÇO 1: Sofás & Poltronas -->
+                    <div class="group bg-light rounded-3xl overflow-hidden border border-gray-100 hover:border-gray-300 transition-all duration-300 flex flex-col reveal-on-scroll">
+                        <div class="relative h-60 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Higienização de Sofás e Poltronas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-dark/80 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Residencial
+                            </div>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-dark font-display mb-2">Sofás e Poltronas</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                    Extração profunda de sujidades, restauração do toque suave e neutralização completa de odores do dia a dia.
+                                </p>
+                                <ul class="text-xs text-gray-500 space-y-1.5 mb-6">
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Sofás retráteis, de canto e modulares</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Poltronas de descanso e cadeiras de jantar</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Sof%C3%A1%20ou%20Poltrona." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between text-xs font-bold text-brand-deep group-hover:text-brand-emerald pt-4 border-t border-gray-200">
+                                <span>Orçar Sofás & Poltronas</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- SERVIÇO 2: Colchões & Cabeceiras -->
+                    <div class="group bg-light rounded-3xl overflow-hidden border border-gray-100 hover:border-gray-300 transition-all duration-300 flex flex-col reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="relative h-60 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=800" alt="Higienização de Colchões e Cabeceiras" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-dark/80 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Saúde & Sono
+                            </div>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-dark font-display mb-2">Colchões e Cabeceiras</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                    Desinfecção biológica essencial contra ácaros acumulados e suor, devolvendo o frescor e a segurança do seu sono.
+                                </p>
+                                <ul class="text-xs text-gray-500 space-y-1.5 mb-6">
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Solteiro, Casal, Queen e King Size</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Cabeceiras estofadas e bases box</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Colch%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between text-xs font-bold text-brand-deep group-hover:text-brand-emerald pt-4 border-t border-gray-200">
+                                <span>Orçar Colchão</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SERVIÇO 3: Tapetes & Cortinas -->
+                    <div class="group bg-light rounded-3xl overflow-hidden border border-gray-100 hover:border-gray-300 transition-all duration-300 flex flex-col reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="relative h-60 overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&q=80&w=800" alt="Higienização de Tapetes e Cortinas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="absolute top-4 left-4 bg-dark/80 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Cuidados Especiais
+                            </div>
+                        </div>
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-dark font-display mb-2">Tapetes e Cortinas</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                    Tratamento de fibras para remoção de poeira entranhada e marcas de tráfego sem agredir a estrutura do material.
+                                </p>
+                                <ul class="text-xs text-gray-500 space-y-1.5 mb-6">
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Tapetes de pelos altos e baixos</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-deep"></i> Cortinas e tecidos finos</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Tapetes%20ou%20Cortinas." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between text-xs font-bold text-brand-deep group-hover:text-brand-emerald pt-4 border-t border-gray-200">
+                                <span>Orçar Tapetes</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SERVIÇO 4: Itens Infantis / Baby -->
+                    <div class="group bg-light rounded-3xl overflow-hidden border border-gray-100 hover:border-gray-300 transition-all duration-300 flex flex-col reveal-on-scroll">
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-brand-mist text-brand-deep flex items-center justify-center mb-4">
+                                    <i data-lucide="baby" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-brand-deep uppercase tracking-wider">Família & Bebê</span>
+                                <h3 class="text-2xl font-bold text-dark font-display mt-1 mb-2">Itens Infantis & Baby</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                    Assepsia rigorosa com química 100% segura para recém-nascidos e crianças pequenas.
+                                </p>
+                                <p class="text-xs text-gray-500 leading-relaxed mb-6">
+                                    Carrinhos de bebê, bebê-conforto, cadeirinhas automotivas e ninhos redutores.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20itens%20infantis/beb%C3%AA." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between text-xs font-bold text-brand-deep group-hover:text-brand-emerald pt-4 border-t border-gray-200">
+                                <span>Orçar Itens Infantis</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SERVIÇO 5: Automotivo (Destaque Rápido) -->
+                    <div class="group bg-dark text-white rounded-3xl overflow-hidden border border-gray-800 transition-all duration-300 flex flex-col reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-white/10 text-silver flex items-center justify-center mb-4">
+                                    <i data-lucide="car" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-brand-glow uppercase tracking-wider">Automotivo Premium</span>
+                                <h3 class="text-2xl font-bold text-white font-display mt-1 mb-2">Bancos e Interiores</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                                    Revitalização de estofados automotivos, bancos em tecido/couro, teto e carpetes a domicílio.
+                                </p>
+                                <p class="text-xs text-gray-500 leading-relaxed mb-6">
+                                    Eliminação de odores e poeira acumulada nos trajetos do dia a dia.
+                                </p>
+                            </div>
+                            <a href="#automotivo" class="inline-flex items-center justify-between text-xs font-bold text-brand-glow hover:text-white pt-4 border-t border-gray-800">
+                                <span>Ver detalhes da linha Automotiva</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SERVIÇO 6: Impermeabilização (Proteção) -->
+                    <div class="group bg-gradient-to-br from-surface to-dark text-white rounded-3xl overflow-hidden border border-gold/30 transition-all duration-300 flex flex-col reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-gold/20 text-gold flex items-center justify-center mb-4">
+                                    <i data-lucide="shield" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-gold uppercase tracking-wider">Proteção de Alta Performance</span>
+                                <h3 class="text-2xl font-bold text-white font-display mt-1 mb-2">Impermeabilização</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Criação de uma película repelente que impede que café, sucos, vinho ou acidentes com pets manchem o estofado.
+                                </p>
+                                <p class="text-xs text-gold/80 leading-relaxed mb-6">
+                                    Conserva a cor, não altera a textura original e aumenta a vida útil do móvel.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20saber%20mais%20sobre%20Impermeabiliza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between text-xs font-bold text-gold hover:text-white pt-4 border-t border-gold/20">
+                                <span>Solicitar Proteção Impermeabilizante</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="bg-light p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-premium transition-shadow fade-in-up relative" style="transition-delay: 200ms;">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
-                    <div class="flex gap-1 text-gold mb-6">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                    <p class="text-gray-600 font-light text-lg italic mb-8 leading-relaxed">
-                        "Agendamento via whats mega rápido, prestativos pra tirar dúvidas. Chegaram pontualmente no dia. Tiraram o acúmulo de pelo + baba dos meus bulldogs sem molhar a casa inteira. Nota 10 pro atendimento em Marabá."
-                    </p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-600 text-lg border border-gray-300">R</div>
-                        <div>
-                            <p class="font-bold text-dark text-base">Roberto Alves</p>
-                            <p class="text-sm text-gray-500">Engenheiro / Tutor de pets</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 9. CTA FINAL (FUNDO ESCURO) -->
-    <section class="py-32 bg-dark relative overflow-hidden">
-        <!-- Abstract gradient noise or glow -->
-        <div class="absolute inset-0 bg-dark z-0"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-deep/20 via-transparent to-transparent pointer-events-none z-0"></div>
-        
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-in-up">
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[1.1]">
-                Pronto para deixar seu sofá <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-light to-gold">realmente limpo?</span>
-            </h2>
-            <p class="text-2xl text-gray-400 font-light mb-14 text-balance mx-auto max-w-2xl leading-relaxed">
-                Transforme sua casa hoje. Agende rápido pelo WhatsApp e reserve seu horário.
-            </p>
-
-            <a href="https://wa.me/5594981268102?text=Olá!%20Vim%20pelo%20site%20e%20quero%20um%20orçamento%20rápido." class="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-brand-deep hover:bg-[#206024] text-white font-bold py-6 px-12 rounded-2xl transition-all shadow-[0_0_50px_rgba(46,125,50,0.5)] hover:shadow-[0_0_80px_rgba(46,125,50,0.8)] hover:-translate-y-2 text-xl w-full sm:w-auto">
-                <i data-lucide="message-circle" class="w-7 h-7"></i>
-                Quero meu orçamento agora
-            </a>
-            
-            <div class="mt-10 flex flex-col items-center justify-center gap-2">
-                <div class="flex -space-x-4 mb-2">
-                    <img class="w-12 h-12 rounded-full border-2 border-dark" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Avatar">
-                    <img class="w-12 h-12 rounded-full border-2 border-dark" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="Avatar">
-                    <img class="w-12 h-12 rounded-full border-2 border-dark" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+        <!-- 4. SEÇÃO O MÉTODO HYGIA (CUIDADO EM CADA ETAPA) -->
+        <section class="py-20 sm:py-28 bg-dark text-white border-b border-gray-800 relative overflow-hidden" id="metodo">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+                
+                <div class="max-w-3xl mb-16 reveal-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-light">Protocolo de Excelência</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white mt-2 mb-4">
+                        Cuidado em cada etapa.
+                    </h2>
+                    <p class="text-gray-400 text-base sm:text-lg">
+                        Um método estruturado, seguro e padronizado para garantir máxima assepsia sem danificar as estruturas ou encharcar a espuma.
+                    </p>
                 </div>
-                <p class="text-gray-400 font-medium text-sm flex items-center gap-2 tracking-wide">
-                    <span class="relative flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-light opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-light"></span>
-                    </span>
-                    Atendimento imediato em Marabá
+
+                <!-- 5 Etapas Oficiais do Briefing -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    
+                    <!-- Etapa 01 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-emerald/40 transition-all duration-300 reveal-on-scroll flex flex-col justify-between">
+                        <div>
+                            <span class="font-display font-bold text-3xl text-brand-light/40 block mb-4">01</span>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Avaliação</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Análise técnica detalhada da composição do tecido, tipo de fibra e manchas existentes para escolha do procedimento ideal.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 text-[11px] text-gray-500 font-medium">
+                            Diagnóstico prévio
+                        </div>
+                    </div>
+
+                    <!-- Etapa 02 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-emerald/40 transition-all duration-300 reveal-on-scroll flex flex-col justify-between" style="transition-delay: 100ms;">
+                        <div>
+                            <span class="font-display font-bold text-3xl text-brand-light/40 block mb-4">02</span>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Preparação</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Preparação adequada do espaço com forração preventiva para não molhar nem respingar no piso ou nas paredes da sua casa.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 text-[11px] text-gray-500 font-medium">
+                            Sem bagunça no lar
+                        </div>
+                    </div>
+
+                    <!-- Etapa 03 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-emerald/40 transition-all duration-300 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div>
+                            <span class="font-display font-bold text-3xl text-brand-light/40 block mb-4">03</span>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Higienização</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Aplicação de produtos regulamentados, atóxicos e seguros que solubilizam a sujeira e quebram as ligações da oleosidade.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 text-[11px] text-gray-500 font-medium">
+                            Ação bactericida
+                        </div>
+                    </div>
+
+                    <!-- Etapa 04 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-emerald/40 transition-all duration-300 reveal-on-scroll" style="transition-delay: 300ms;">
+                        <div>
+                            <span class="font-display font-bold text-3xl text-brand-light/40 block mb-4">04</span>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Extração</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Sucção de alto vácuo que puxa toda a sujidade dissolvida e a água, garantindo secagem rápida no mesmo dia.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 text-[11px] text-gray-500 font-medium">
+                            Alto vácuo
+                        </div>
+                    </div>
+
+                    <!-- Etapa 05 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-emerald/40 transition-all duration-300 reveal-on-scroll" style="transition-delay: 400ms;">
+                        <div>
+                            <span class="font-display font-bold text-3xl text-gold/60 block mb-4">05</span>
+                            <h3 class="text-lg font-bold text-white font-display mb-2">Finalização</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Neutralização de odores, alinhamento das fibras e orientações práticas de conservação ao cliente.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/5 text-[11px] text-gray-500 font-medium">
+                            Aroma & Toque macio
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. SEÇÃO RESULTADOS REAIS (ANTES & DEPOIS INTERATIVO) -->
+        <section class="py-20 sm:py-28 bg-white border-b border-gray-200/80" id="resultados">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Evidência Visual</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-dark mt-2 mb-4">
+                        O resultado fala por nós.
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Arraste os marcadores para conferir a recuperação real dos estofados higienizados pela Hygia.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    
+                    <!-- CASO 1: Banco de Carro (Foto Real) -->
+                    <div class="bg-light p-5 sm:p-6 rounded-3xl border border-gray-200/80 shadow-subtle reveal-on-scroll">
+                        <div class="ba-container rounded-2xl h-72 sm:h-96 w-full relative overflow-hidden shadow-inner" id="ba-carro">
+                            <!-- Imagem DEPOIS (Fundo) -->
+                            <img src="/images/banco-carro-depois.jpg" alt="Depois da Higienização - Banco de Carro" class="absolute inset-0 w-full h-full object-cover select-none">
+                            <div class="absolute top-4 right-4 bg-brand-deep text-white text-xs font-bold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">
+                                DEPOIS
+                            </div>
+
+                            <!-- Imagem ANTES (Sobreposição cortada) -->
+                            <div class="ba-overlay absolute inset-0 overflow-hidden" style="width: 50%;">
+                                <img src="/images/banco-carro-antes.jpg" alt="Antes da Higienização - Banco de Carro" class="absolute inset-0 w-full h-full object-cover select-none max-w-none">
+                                <div class="absolute top-4 left-4 bg-dark/85 text-white text-xs font-bold px-3 py-1 rounded-full z-10 pointer-events-none">
+                                    ANTES
+                                </div>
+                            </div>
+
+                            <!-- Divisor Central com Alça Arrastável -->
+                            <div class="ba-slider" style="left: 50%;">
+                                <div class="ba-handle">
+                                    <i data-lucide="chevrons-left-right" class="w-4 h-4 text-brand-deep"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 px-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-dark font-display">Banco Automotivo</h3>
+                                <span class="text-xs text-brand-deep font-semibold bg-brand-mist px-2.5 py-1 rounded-full">Higienização Veicular</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                Remoção de poeira impregnada, marcas de uso diário e renovação completa do tecido e espuma automotiva.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CASO 2: Colchão de Solteiro (Foto Real) -->
+                    <div class="bg-light p-5 sm:p-6 rounded-3xl border border-gray-200/80 shadow-subtle reveal-on-scroll" style="transition-delay: 150ms;">
+                        <div class="ba-container rounded-2xl h-72 sm:h-96 w-full relative overflow-hidden shadow-inner" id="ba-colchao">
+                            <!-- Imagem DEPOIS (Fundo) -->
+                            <img src="/images/colchao-solteiro-depois.webp" alt="Depois da Higienização - Colchão de Solteiro" class="absolute inset-0 w-full h-full object-cover select-none">
+                            <div class="absolute top-4 right-4 bg-brand-deep text-white text-xs font-bold px-3 py-1 rounded-full z-10 pointer-events-none shadow-md">
+                                DEPOIS
+                            </div>
+
+                            <!-- Imagem ANTES (Sobreposição cortada) -->
+                            <div class="ba-overlay absolute inset-0 overflow-hidden" style="width: 50%;">
+                                <img src="/images/colchao-solteiro-antes.webp" alt="Antes da Higienização - Colchão de Solteiro" class="absolute inset-0 w-full h-full object-cover select-none max-w-none">
+                                <div class="absolute top-4 left-4 bg-dark/85 text-white text-xs font-bold px-3 py-1 rounded-full z-10 pointer-events-none">
+                                    ANTES
+                                </div>
+                            </div>
+
+                            <!-- Divisor Central com Alça Arrastável -->
+                            <div class="ba-slider" style="left: 50%;">
+                                <div class="ba-handle">
+                                    <i data-lucide="chevrons-left-right" class="w-4 h-4 text-brand-deep"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 px-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-dark font-display">Colchão de Solteiro</h3>
+                                <span class="text-xs text-brand-deep font-semibold bg-brand-mist px-2.5 py-1 rounded-full">Assepsia & Extração</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                Extração profunda de manchas de suor, ácaros acumulados e higienização biológica da espuma com secagem rápida.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA Intermediário de Resultados -->
+                <div class="mt-12 text-center reveal-on-scroll">
+                    <p class="text-sm text-gray-500 mb-4">Seu estofado pode estar precisando de mais cuidado do que você imagina.</p>
+                    <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20renovar%20meu%20estofado." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-deep hover:bg-brand-emerald text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-md hover:-translate-y-0.5 text-sm">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-brand-glow"></i>
+                        <span>Quero Renovar Meu Estofado</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. SEÇÃO HIGIENIZAÇÃO AUTOMOTIVA (PRETO + PRATA + VERDE) -->
+        <section class="py-20 sm:py-28 bg-dark text-white border-b border-gray-800 relative overflow-hidden" id="automotivo">
+            <!-- Background Glows -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-silver-metallic/10 blur-[130px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-deep/20 blur-[130px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Copy & Detailing Info -->
+                    <div class="lg:col-span-6 reveal-on-scroll">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-silver/20 text-xs font-mono text-silver uppercase mb-4">
+                            <i data-lucide="gauge" class="w-3.5 h-3.5 text-brand-glow"></i>
+                            <span>LINHA AUTOMOTIVA • PRECISÃO & CUIDADO</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white mb-6 leading-tight text-balance">
+                            Higienização de Interiores <span class="text-transparent bg-clip-text bg-gradient-to-r from-silver to-gray-400">Automotivos.</span>
+                        </h2>
+                        <p class="text-gray-400 text-base leading-relaxed mb-8">
+                            Seu veículo merece o mesmo padrão de cuidado. Realizamos a assepsia completa de bancos em tecido e couro, carpetes, portas e teto, eliminando odores e poeira com atendimento prático a domicílio em Marabá.
+                        </p>
+
+                        <!-- Highlights List -->
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface border border-white/5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-glow shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Bancos em Tecido & Hidratação de Couro</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Limpeza profunda das fibras e tratamento condicionador para couro sem ressecar.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface border border-white/5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-glow shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Higienização de Teto e Carpetes</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Remoção de marcas de contato e desodorização completa da cabine.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface border border-white/5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-glow shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Atendimento no Local em Marabá</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Comodidade total na garagem da sua casa ou condomínio.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20automotiva." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-deep hover:bg-brand-emerald text-white font-semibold py-4 px-8 rounded-xl transition-all shadow-glow-green text-sm">
+                            <i data-lucide="car" class="w-5 h-5"></i>
+                            <span>Orçar Higienização do Meu Carro</span>
+                        </a>
+                    </div>
+
+                    <!-- Right: Fotografia Real Automotiva -->
+                    <div class="lg:col-span-6 reveal-on-scroll" style="transition-delay: 150ms;">
+                        <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-surface group">
+                            <img src="https://i.postimg.cc/hjLQP4PL/car-higi.jpg" alt="Higienização de bancos e interiores automotivos Hygia em Marabá" class="w-full h-80 sm:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105" crossorigin="anonymous">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-dark/40 to-transparent"></div>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-dark">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs uppercase tracking-widest text-silver font-mono">Padrão Técnico</p>
+                                        <h3 class="text-white font-bold text-lg font-display">Conforto ao dirigir</h3>
+                                    </div>
+                                    <span class="text-xs bg-brand-deep text-white px-3 py-1 rounded-full font-semibold">Sem Odores</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. SEÇÃO IMPERMEABILIZAÇÃO (PRETO + DOURADO) -->
+        <section class="py-20 sm:py-28 bg-[#0B0C0E] text-white border-b border-gray-800 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+                
+                <div class="rounded-3xl border border-gold/30 bg-surface p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl reveal-on-scroll">
+                    <!-- Subtle Gold Glow -->
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-gold/15 blur-[120px] rounded-full pointer-events-none"></div>
+                    
+                    <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        <div class="lg:col-span-7">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-xs font-bold text-gold uppercase mb-6 tracking-widest">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                <span>BLINDAGEM & CONSERVAÇÃO</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white mb-6 leading-tight">
+                                Impermeabilização Premium de Estofados
+                            </h2>
+                            <p class="text-gray-300 text-base leading-relaxed mb-8 max-w-xl">
+                                Crie um escudo invisível e hidrofóbico sobre as fibras do tecido. Evite que respingos acidentais de café, vinho, água ou urina de pets infiltrem e causem manchas definitivas.
+                            </p>
+
+                            <div class="grid sm:grid-cols-2 gap-4 mb-8 text-xs text-gray-300">
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                    <span>Não altera a cor nem o toque</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                    <span>Facilita a limpeza de emergência</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                    <span>Preserva o valor do móvel novo</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold"></i>
+                                    <span>Aplicação segura e certificada</span>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20Impermeabiliza%C3%A7%C3%A3o%20para%20meu%20estofado." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gold hover:bg-gold-light text-dark font-bold py-4 px-8 rounded-xl transition-all shadow-glow-gold text-sm">
+                                <span>Ver Preço da Impermeabilização</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-2xl overflow-hidden border border-gold/20 shadow-xl bg-dark aspect-[4/3] group">
+                                <img src="https://i.postimg.cc/mrMt8Z9n/impermeabilizacao-sem-logo.jpg" alt="Impermeabilização profissional de estofados Hygia em Marabá" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" crossorigin="anonymous">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 text-center text-xs text-gold font-medium bg-dark/80 backdrop-blur-md py-2 px-3 rounded-lg border border-gold/20">
+                                    Efeito Repelente Imediato
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 8. SEÇÃO PARA QUEM É A HYGIA -->
+        <section class="py-20 sm:py-28 bg-light border-b border-gray-200/80">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Identificação & Cuidado</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-dark mt-2 mb-4">
+                        Para quem não quer apenas limpar. <span class="text-gray-400">Quer cuidar.</span>
+                    </h2>
+                    <p class="text-gray-600 text-base">
+                        A Hygia foi desenhada para quem valoriza seu espaço, preza pela saúde de quem convive e busca resultados de verdade.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Perfil 1 -->
+                    <div class="bg-white p-7 rounded-2xl border border-gray-100 shadow-subtle hover:-translate-y-1 transition-all duration-300 reveal-on-scroll">
+                        <div class="w-12 h-12 rounded-xl bg-brand-mist text-brand-deep flex items-center justify-center mb-5">
+                            <i data-lucide="baby" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark font-display mb-2">Famílias com Crianças</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            Bebês e crianças passam horas brincando sobre o sofá e o tapete. Garantir um ambiente livre de bactérias é uma prioridade de saúde.
+                        </p>
+                    </div>
+
+                    <!-- Perfil 2 -->
+                    <div class="bg-white p-7 rounded-2xl border border-gray-100 shadow-subtle hover:-translate-y-1 transition-all duration-300 reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 rounded-xl bg-gold-glow text-gold-dark flex items-center justify-center mb-5">
+                            <i data-lucide="dog" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark font-display mb-2">Tutores de Pets</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            Amamos nossos animais, mas pelos, saliva e patas trazem odores e oleosidade que só uma extração profissional consegue neutralizar.
+                        </p>
+                    </div>
+
+                    <!-- Perfil 3 -->
+                    <div class="bg-white p-7 rounded-2xl border border-gray-100 shadow-subtle hover:-translate-y-1 transition-all duration-300 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5">
+                            <i data-lucide="wind" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark font-display mb-2">Pessoas Alérgicas</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            Crises de rinite e espirros constantes em casa costumam vir dos ácaros do colchão e do sofá. A higienização traz alívio imediato.
+                        </p>
+                    </div>
+
+                    <!-- Perfil 4 -->
+                    <div class="bg-white p-7 rounded-2xl border border-gray-100 shadow-subtle hover:-translate-y-1 transition-all duration-300 reveal-on-scroll" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-5">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark font-display mb-2">Amantes do Próprio Lar</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            Para quem gosta de receber visitas com orgulho, manter o ambiente perfumado e conservar o valor dos seus móveis por muitos anos.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 9. SEÇÃO DIFERENCIAIS VERDADEIROS EM MARABÁ -->
+        <section class="py-20 sm:py-28 bg-white border-b border-gray-200/80" id="diferenciais">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 reveal-on-scroll">
+                        <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Compromisso & Respeito</span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-dark mt-2 mb-6 leading-tight">
+                            Por que escolher a Hygia em Marabá?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed mb-8">
+                            Não vendemos fórmulas mágicas. Entregamos um serviço técnico, feito com produtos adequados, pontualidade rigorosa e respeito ao seu ambiente.
+                        </p>
+                        <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-dark hover:bg-brand-deep text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition-colors">
+                            <span>Conversar com a Equipe</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-4 reveal-on-scroll" style="transition-delay: 150ms;">
+                        
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-light border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brand-mist text-brand-deep flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-dark">Atendimento Domiciliar em Marabá e Região</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Realizamos todo o procedimento na sua residência ou empresa sem que você precise transportar nada.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-light border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brand-mist text-brand-deep flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-dark">Produtos Certificados e Seguros</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Formulações testadas que não deixam odores fortes e são 100% inofensivas para bebês e animais domésticos após secagem.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-light border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brand-mist text-brand-deep flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-dark">Pontualidade e Cuidado com o Espaço</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Chegamos no horário combinado e forramos a área de trabalho para deixar sua casa exatamente como encontramos.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 10. CONCEITO HYGIEIA (STORYTELLING DISCRETO) -->
+        <section class="py-16 bg-[#0E1012] text-gray-400 border-b border-gray-800">
+            <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center reveal-on-scroll">
+                <div class="w-12 h-12 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold mb-4">
+                    <i data-lucide="feather" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-brand text-white tracking-widest uppercase mb-3">O Conceito Hygia</h3>
+                <p class="text-sm sm:text-base font-normal leading-relaxed text-gray-300 max-w-2xl mx-auto text-balance">
+                    Inspirada em <em>Hygieia</em>, guardiã da saúde, prevenção e harmonia, a <strong>HYGIA</strong> nasceu para transformar o cuidado com os estofados em um ritual de bem-estar, preservação e tranquilidade para o seu lar.
                 </p>
+                <div class="flex items-center justify-center gap-2 mt-4 text-xs tracking-widest text-gold/70 uppercase">
+                    <span>Higienização</span>
+                    <span>•</span>
+                    <span>Cuidado</span>
+                    <span>•</span>
+                    <span>Bem-Estar</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Simple -->
-    <footer class="bg-dark border-t border-white/5 py-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center gap-6">
-            <div class="flex items-center gap-2 opacity-80">
-                <img src="https://i.postimg.cc/DZZR70cY/logo.png" alt="Hygia" class="h-10 w-auto object-contain grayscale brightness-0 invert" crossorigin="anonymous">
+        <!-- 11. ORÇAMENTO RÁPIDO & FORMULÁRIO SIMPLIFICADO -->
+        <section class="py-20 sm:py-28 bg-light border-b border-gray-200/80" id="orcamento">
+            <div class="max-w-4xl mx-auto px-5 sm:px-8">
+                
+                <div class="text-center mb-12 reveal-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-brand-deep">Atendimento Ágil</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-display text-dark mt-2 mb-3">
+                        Solicite seu orçamento em 1 minuto
+                    </h2>
+                    <p class="text-gray-500 text-sm sm:text-base">
+                        Selecione o serviço desejado ou envie a foto do seu estofado diretamente para nossa equipe no WhatsApp.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200/80 shadow-premium reveal-on-scroll">
+                    
+                    <form id="quick-quote-form" onsubmit="event.preventDefault(); window.sendWhatsAppQuote();" class="space-y-6">
+                        
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="client-name" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Seu Nome</label>
+                                <input type="text" id="client-name" required placeholder="Como podemos te chamar?" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-brand-deep focus:ring-2 focus:ring-brand-mist outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label for="service-select" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Serviço de Interesse</label>
+                                <select id="service-select" required class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-brand-deep focus:ring-2 focus:ring-brand-mist outline-none text-sm bg-white transition-all">
+                                    <option value="Higienização de Sofá">Higienização de Sofá / Poltrona</option>
+                                    <option value="Higienização de Colchão">Higienização de Colchão</option>
+                                    <option value="Higienização de Tapete / Cortina">Higienização de Tapete ou Cortina</option>
+                                    <option value="Higienização Automotiva">Higienização Automotiva (Bancos / Interior)</option>
+                                    <option value="Impermeabilização de Estofados">Impermeabilização de Estofados</option>
+                                    <option value="Itens Infantis / Bebê">Higienização de Itens Infantis / Bebê</option>
+                                    <option value="Mais de um serviço">Pacote Combinado (Mais de um item)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="client-details" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Detalhes do Estofado (Opcional)</label>
+                            <input type="text" id="client-details" placeholder="Ex: Sofá retrátil 3 lugares cinza / Colchão Queen / etc." class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-brand-deep focus:ring-2 focus:ring-brand-mist outline-none text-sm transition-all">
+                        </div>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4 items-center justify-between">
+                            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-deep hover:bg-brand-emerald text-white font-bold py-4 px-8 rounded-xl transition-all shadow-glow-green text-sm sm:text-base">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Enviar pelo WhatsApp</span>
+                            </button>
+                            <span class="text-xs text-gray-400 text-center sm:text-right">
+                                Atendimento em horário comercial em Marabá
+                            </span>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
-            <p class="text-gray-500 font-light text-sm max-w-sm">Especialistas em assepsia e higienização profunda de estofados. Atendimento premium.</p>
-            <div class="h-px w-24 bg-white/10 my-4"></div>
-            <p class="text-gray-600 text-xs">© 2024 Hygia Marabá. Todos os direitos reservados.</p>
+        </section>
+
+        <!-- 12. CTA FINAL (PRETO + VERDE HYGIA + DOURADO) -->
+        <section class="py-24 sm:py-32 bg-dark text-white relative overflow-hidden text-center">
+            <!-- Glow Central -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[500px] bg-brand-deep/25 blur-[140px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto px-5 sm:px-8 relative z-10 reveal-on-scroll">
+                
+                <img src="https://i.postimg.cc/DZZR70cY/logo.png" alt="Hygia" class="h-12 w-auto mx-auto mb-8 object-contain filter brightness-0 invert opacity-90" crossorigin="anonymous">
+
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-display text-white mb-6 leading-tight text-balance">
+                    Seu estofado não precisa parecer novo.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-glow via-white to-gold-light">Precisa estar bem cuidado.</span>
+                </h2>
+
+                <p class="text-base sm:text-xl text-gray-400 mb-10 max-w-xl mx-auto font-normal leading-relaxed text-balance">
+                    Agende sua higienização com a equipe Hygia e renove a sensação de aconchego da sua casa em Marabá.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/5594981268102?text=Ol%C3%A1%2C%20Hygia!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-deep hover:bg-brand-emerald text-white font-bold py-5 px-10 rounded-2xl transition-all shadow-glow-green hover:-translate-y-1 text-base sm:text-lg">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        <span>FALAR COM A HYGIA</span>
+                    </a>
+                </div>
+
+                <div class="mt-12 text-xs font-mono tracking-widest text-gray-500 uppercase">
+                    MARABÁ • PARÁ
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 13. RODAPÉ INSTITUCIONAL -->
+    <footer class="bg-darker border-t border-white/5 py-16 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Coluna 1: Assinatura da Marca -->
+                <div class="md:col-span-2 space-y-4">
+                    <img src="https://i.postimg.cc/DZZR70cY/logo.png" alt="HYGIA" class="h-10 w-auto object-contain filter brightness-0 invert opacity-90" crossorigin="anonymous">
+                    <p class="text-xs text-gray-400 tracking-widest uppercase font-brand text-gold">HIGIENIZAÇÃO • CUIDADO • BEM-ESTAR</p>
+                    <p class="text-xs text-gray-500 max-w-sm leading-relaxed">
+                        Especialistas em assepsia e conservação de estofados, colchões, tapetes e interiores automotivos em Marabá e região.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#servicos" class="hover:text-brand-light transition-colors">Higienização de Sofás</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-light transition-colors">Higienização de Colchões</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-light transition-colors">Higienização de Tapetes</a></li>
+                        <li><a href="#automotivo" class="hover:text-brand-light transition-colors">Interiores Automotivos</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-light transition-colors">Impermeabilização</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato & Localização -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Atendimento</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-light shrink-0"></i>
+                            <span>Marabá — Pará</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-light shrink-0"></i>
+                            <a href="https://wa.me/5594981268102" class="hover:text-white transition-colors">(94) 98126-8102</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-light shrink-0"></i>
+                            <span>Segunda a Sábado</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+                <p>© 2026 HYGIA. Todos os direitos reservados.</p>
+                <p class="text-[11px] text-gray-600">Marabá - PA • Atendimento Residencial & Corporativo</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Init Scripts -->
+    <!-- JAVASCRIPT: CONFIGURAÇÕES CENTRAIS & MICROINTERAÇÕES -->
     <script>
-        // Init Lucide Icons
-        lucide.createIcons();
-
-        // Scroll Animation (Fade In Up)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15 // Slightly higher threshold for later activation
+        /**
+         * CONFIGURAÇÕES DA HYGIA
+         * Centralização de contatos, textos e links para fácil manutenção.
+         */
+        const HYGIA_CONFIG = {
+            brandName: "HYGIA",
+            tagline: "HIGIENIZAÇÃO • CUIDADO • BEM-ESTAR",
+            city: "Marabá — Pará",
+            coverageArea: "Marabá e região",
+            phoneFormatted: "(94) 98126-8102",
+            whatsappRaw: "5594981268102",
+            defaultWhatsAppMessage: "Olá, Hygia! Gostaria de solicitar um orçamento para higienização."
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        // 1. Inicializar Ícones Lucide
+        lucide.createIcons();
+
+        // 2. Animações Reveal on Scroll suaves
+        const revealElements = document.querySelectorAll('.reveal-on-scroll');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Stop watching once animated
+                    entry.target.classList.add('is-visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.fade-in-up').forEach((el) => {
-                observer.observe(el);
-            });
+        }, {
+            root: null,
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
         });
 
-        // Header Background on Scroll
-        const header = document.getElementById('header');
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 3. Header Glassmorphism dinâmico ao rolar
+        const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                header.classList.add('bg-white/95', 'shadow-sm');
-                header.classList.remove('bg-transparent');
+                header.classList.add('shadow-sm', 'bg-white/95');
+                header.classList.remove('glass-header');
             } else {
-                header.classList.remove('bg-white/95', 'shadow-sm');
-                header.classList.add('bg-transparent');
+                header.classList.remove('shadow-sm', 'bg-white/95');
+                header.classList.add('glass-header');
             }
-        });
+        }, { passive: true });
+
+        // 4. Inicializador Interativo do Comparador Antes/Depois
+        function initBeforeAfterSlider(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const slider = container.querySelector('.ba-slider');
+            const overlay = container.querySelector('.ba-overlay');
+            const overlayImg = overlay ? overlay.querySelector('img') : null;
+            let isDragging = false;
+
+            function updateOverlayImageSize() {
+                if (overlayImg && container) {
+                    overlayImg.style.width = container.clientWidth + 'px';
+                    overlayImg.style.height = container.clientHeight + 'px';
+                }
+            }
+
+            function setPosition(x) {
+                const rect = container.getBoundingClientRect();
+                let pos = (x - rect.left) / rect.width;
+                if (pos < 0.02) pos = 0.02;
+                if (pos > 0.98) pos = 0.98;
+                const percent = pos * 100;
+                slider.style.left = percent + '%';
+                overlay.style.width = percent + '%';
+            }
+
+            updateOverlayImageSize();
+            window.addEventListener('resize', updateOverlayImageSize);
+
+            function onPointerDown(e) {
+                isDragging = true;
+                const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+                setPosition(clientX);
+            }
+
+            function onPointerMove(e) {
+                if (!isDragging) return;
+                const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+                setPosition(clientX);
+            }
+
+            function onPointerUp() {
+                isDragging = false;
+            }
+
+            container.addEventListener('mousedown', onPointerDown);
+            window.addEventListener('mousemove', onPointerMove);
+            window.addEventListener('mouseup', onPointerUp);
+
+            container.addEventListener('touchstart', onPointerDown, { passive: true });
+            window.addEventListener('touchmove', onPointerMove, { passive: true });
+            window.addEventListener('touchend', onPointerUp);
+        }
+
+        initBeforeAfterSlider('ba-carro');
+        initBeforeAfterSlider('ba-colchao');
+
+        // 5. Integração do Formulário Rápido com WhatsApp
+        window.sendWhatsAppQuote = function() {
+            const name = document.getElementById('client-name').value.trim();
+            const service = document.getElementById('service-select').value;
+            const details = document.getElementById('client-details').value.trim();
+
+            let message = `Olá, Hygia! Meu nome é *${name}*.\n`;
+            message += `Gostaria de um orçamento para: *${service}*.\n`;
+            if (details) {
+                message += `Detalhes: ${details}\n`;
+            }
+            message += `Atendimento em Marabá - PA.`;
+
+            // Disparar Evento Meta Pixel de Lead
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: service,
+                    content_category: 'Higienização de Estofados'
+                });
+            }
+
+            const url = `https://wa.me/${HYGIA_CONFIG.whatsappRaw}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        };
     </script>
 </body>
 </html>
-
